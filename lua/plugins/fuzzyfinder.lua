@@ -26,12 +26,12 @@ plugin = {
 	-- there are different ways to define keymaps but i chose to use a key table in the plugin config coz i want plugin-specific keymaps to be defined within the corresponding plugin lua file.
 	keys = {
 		-- keymaps suggeted by official github page
-		{'<leader>ff', ':Telescope find_files<CR>', desc='Find files under cwd. Use :cd C:/ to change cwd.'},
-		{'<leader>fg', ':Telescope live_grep<CR>', desc='live grep find string in cwd.' },
-		{'<leader>fb', ':Telescope buffers<CR>', desc='list buffers' },
-		{'<leader>f?', ':Telescope help_tags<CR>', desc='help tags' },  -- official suggets fh, but i make it f? to be consistent with neotree ? for commands. Also coz i need fh for find hidden files
+		{'<leader>ff', ':Telescope find_files<CR>', desc='telescope->:Telescope find_files. Find files under cwd. Use :cd C:/ to change cwd.'},
+		{'<leader>fg', ':Telescope live_grep<CR>', desc='telescope->:Telescope live_grep. Find string in cwd.' },
+		{'<leader>fb', ':Telescope buffers<CR>', desc='telescope->:Telescope buffers. List buffers' },
+		{'<leader>f?', ':Telescope help_tags<CR>', desc='telescope->:Telescope help_tags. Show help tags' },  -- official suggets fh, but i make it f? to be consistent with neotree ? for commands. Also coz i need fh for find hidden files
 		-- custom keymaps
-		{'<leader>fh', ':Telescope find_files hidden=true<CR>', desc='Find files including hidden under cwd.'},
+		{'<leader>fh', ':Telescope find_files hidden=true<CR>', desc='telescope->:Telescope find_files hidden=true. Find files including hidden under cwd.'},
 	},
 
 }

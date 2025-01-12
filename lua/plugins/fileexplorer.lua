@@ -13,12 +13,12 @@ plugin =
 	keys = {
 		{
 			'<leader>nn', ':Neotree<CR>',  -- using <leader>nn instead of <leader>n to hack the default timeoutlen of 1000ms so there wouldn't be a delay displaying the Neotree window
-			desc = 'Open Noetree',
+			desc = 'neo-tree->:Neotree',
 			silent = true,
 		},
 		{
 			'<leader>nr', ':Neotree reveal<CR>',
-			desc = 'Open Noetree reveal current file',
+			desc = 'neo-tree->:Neotree reveal',
 			silent = true,
 		},
 	},

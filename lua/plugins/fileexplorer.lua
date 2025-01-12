@@ -12,12 +12,12 @@ plugin =
 	-- after adding the "keys" section, neovim would only lazy-load the command :Neotree and the mapped key wouldn't trigger the load. So it becomes neccessary to add the "cmd='Neotree' before keys section.
 	keys = {
 		{
-			'\\', ':Neotree<CR>',
+			'<leader>nn', ':Neotree<CR>',  -- using <leader>nn instead of <leader>n to hack the default timeoutlen of 1000ms so there wouldn't be a delay displaying the Neotree window
 			desc = 'Open Noetree',
 			silent = true,
 		},
 		{
-			'<C-\\>', ':Neotree reveal<CR>',
+			'<leader>nr', ':Neotree reveal<CR>',
 			desc = 'Open Noetree reveal current file',
 			silent = true,
 		},
@@ -27,7 +27,7 @@ plugin =
 		filesystem = {
 			window = {
 				mappings = {
-					['\\'] = 'close_window',
+					['<leader>n'] = 'close_window',
 				},
 			},
 		},

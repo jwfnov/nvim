@@ -20,14 +20,20 @@ plugin = {
 	--optionally branch = '0.1.x',
 	dependencies = { 'nvim-lua/plenary.nvim' },
 
-	--cmd = 'Telescope',  -- telescope is smart enough to skip this line, unlike neotree lol where cmd='Neotree' is required for keys table to recognize the :Neotree command.
+	--lazy=false,  -- this ensure telescope is loaded (so that you can use :Telescope command) even before any keymaps is used, i.e. avoid lazy loading
+	cmd = 'Telescope',  -- either use this or lazy=false so that you can use :Telescope command before lazy-loading is triggerd upon any keymaps being used. Note this is not identical to lazy=false coz lazy=false really loads the plugin so you can use :checkheath telescope, but cmd='Telescope' only enables you to use :Telescope command.
+	
 	-- there are different ways to define keymaps but i chose to use a key table in the plugin config coz i want plugin-specific keymaps to be defined within the corresponding plugin lua file.
 	keys = {
-		{'<leader>ff', ':Telescope find_files<CR>', desc='find files'},
-		{'<leader>fg', ':Telescope live_grep<CR>', desc='live grep' },
+		-- keymaps suggeted by official github page
+		{'<leader>ff', ':Telescope find_files<CR>', desc='Find files under cwd. Use :cd C:/ to change cwd.'},
+		{'<leader>fg', ':Telescope live_grep<CR>', desc='live grep find string in cwd.' },
 		{'<leader>fb', ':Telescope buffers<CR>', desc='list buffers' },
-		{'<leader>fn', ':Telescope help_tags<CR>', desc='help tags' },
+		{'<leader>f?', ':Telescope help_tags<CR>', desc='help tags' },  -- official suggets fh, but i make it f? to be consistent with neotree ? for commands. Also coz i need fh for find hidden files
+		-- custom keymaps
+		{'<leader>fh', ':Telescope find_files hidden=true<CR>', desc='Find files including hidden under cwd.'},
 	},
+
 }
 
 return plugin

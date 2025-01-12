@@ -7,7 +7,7 @@
 		-- nvim-treesitter for finder/preview
 -- External Dependecies:
 	-- Suggested:
-		-- ripgrep by downloading the prebuilt binary rg.exe for live_grep and grep_string and find_files
+		-- ripgrep by downloading the prebuilt binary rg.exe for find_files,live_grep and grep_string
 		-- githbu.com/sharkdp/fd, for extended capabilities like finder
 -- After installation, run :cheakhealth telescope to see if things are set up properly
 -- To use:

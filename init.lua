@@ -1,5 +1,6 @@
 -- User Preferences Go First
 require("jw.keymaps")
+require("jw.options")
 
 -- Setup lazy.nvim
 require("plugins.lazy")

@@ -9,4 +9,5 @@ require("plugins.lazy")
 require("lazy").setup({
     require("plugins.fileexplorer"),
     require("plugins.fuzzyfinder"),
+    require("plugins.whichkey"),
 })

@@ -1,5 +1,7 @@
 local o = vim.opt
 
+
+-- line no
 o.number = true
 o.relativenumber = true
 

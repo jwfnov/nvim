@@ -10,4 +10,8 @@ require("lazy").setup({
     require("plugins.fileexplorer"),
     require("plugins.fuzzyfinder"),
     require("plugins.whichkey"),
+    require("plugins.treesitter"),
+    require("plugins.colortheme"),
 })
+
+

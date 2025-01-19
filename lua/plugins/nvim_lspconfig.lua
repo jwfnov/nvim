@@ -14,7 +14,7 @@ plugin = {
     --=== set up each lsp server in nvim lspconfig
     local nvim_lspconfig = require("lspconfig")
 
-    --nvim_lspconfig.pylsp.setup({})  -- goto definitons/references
+    nvim_lspconfig.pylsp.setup({})  -- goto definitons/references
     nvim_lspconfig.pyright.setup({})  -- import not resolved/pep standard
   end,
 }

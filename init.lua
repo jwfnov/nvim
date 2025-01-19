@@ -12,6 +12,7 @@ require("lazy").setup({
     require("plugins.whichkey"),
     require("plugins.treesitter"),
     require("plugins.colortheme"),
+    require("plugins.mason"),
 })
 
 

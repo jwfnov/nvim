@@ -6,3 +6,12 @@ Linter checks your code grammar, formatter checks the code formatting e.g. pep8
 
 
 
+plugin = {
+  'williamboman/mason.nvim',
+
+  config = function()
+    require("mason").setup()
+  end,
+}
+
+return plugin

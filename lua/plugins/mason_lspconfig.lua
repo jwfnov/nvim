@@ -15,18 +15,19 @@ plugin = {
   -- important to set up the plugins in the following order:
   -- mason.nvim (done via mason.lua)
   -- mason-lspconfig.nvim (done via current file)
-  -- setup servers via lspconfig (done via current file)
+  -- setup servers via lspconfig (done via nvim_lspconfig file)
   config = function()
 
     local mason_lspconfig = require("mason-lspconfig")
     mason_lspconfig.setup({
-        ensure_installed = { "pylsp", "pyright" },
+        -- alternatively you can use :Mason to install lsp/dap/linter/formatter
+        ensure_installed = 
+        { 
+          "pylsp",  -- lsp that offers go-to-definition/go-to-references/variables-not-used/etc
+          "pyright",  -- Formatter: Pyright is a full-featured, PEP-standards-based static type checker for Python
+        },
     })
 
-    ----=== set up each lsp server in nvim lspconfig
-    --local nvim_lspconfig = require("lspconfig")
-    --nvim_lspconfig.pylsp.setup({})
-    --nvim_lspconfig.pyright.setup({})
   end,
 }
 

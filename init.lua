@@ -12,9 +12,9 @@ require("lazy").setup({
     require("plugins.whichkey"),
     require("plugins.treesitter"),
     require("plugins.colortheme"),
-    require("plugins.nvim_lspconfig"),
-    require("plugins.mason"),
-    --require("plugins.mason_lspconfig"),
+    require("plugins.mason"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
+    require("plugins.mason_lspconfig"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
+    require("plugins.nvim_lspconfig"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
 })
 
 

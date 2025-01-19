@@ -7,3 +7,7 @@ vim.api.nvim_set_keymap('n', '\\\\', '<C-w>c', { noremap=true })
 
 -- quickly go to %LOCALAPPDATA%/nvim to edit the .lua files to configure neovim
 vim.api.nvim_set_keymap('n', '<leader>cdnvim', ':cd C:/Users/oven/AppData/Local/nvim/<CR>', {  noremap=true })
+
+
+-- windows shortcuts that i am soooo used to
+vim.api.nvim_set_keymap({'n','i'}, '<C-s>', '<Esc>:w<CR>', { noremap=true })

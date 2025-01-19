@@ -12,7 +12,9 @@ require("lazy").setup({
     require("plugins.whichkey"),
     require("plugins.treesitter"),
     require("plugins.colortheme"),
+    require("plugins.nvim_lspconfig"),
     require("plugins.mason"),
+    --require("plugins.mason_lspconfig"),
 })
 
 

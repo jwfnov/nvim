@@ -15,6 +15,7 @@ require("lazy").setup({
     require("plugins.mason"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
     require("plugins.mason_lspconfig"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
     require("plugins.nvim_lspconfig"),  -- setup order 1)mason 2)mason-lspconfig 3)nvim-lspconfig
+    require("plugins.autocompletion"),
 })
 
 

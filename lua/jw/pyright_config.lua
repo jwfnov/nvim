@@ -8,14 +8,14 @@ function M.setup()
 
   lspconfig.pyright.setup({
     cmd = {
-      "C:/tools/nvm/nodejs/pyright-langserver.cmd", 
+      "C:\\tools\\nvm\\nodejs\\pyright-langserver.cmd", 
       "--stdio"
     },
 
     settings = {
       python = {
         -- default python path if not overriden by any .venv
-        pythonPath = "C:/Users/oven/miniconda3/envs/py313/python.exe",
+   --     pythonPath = "C:\\Users\\oven\\miniconda3\\envs\\py313\\python.exe",  -- setting this would cause import not resolved for packages not installed in this python env
       },
     },
   
@@ -33,6 +33,7 @@ function M.setup()
         vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format({async=true}) end, opts)
         vim.keymap.set('n', '<leader>vg', "<cmd>lua require('jw.pyright_util').get_pyright_pythonPath()<CR>", opts)
         vim.keymap.set('n', '<leader>vs', "<cmd>lua require('jw.pyright_util').set_pyright_pythonPath_to_local_venv()<CR>", opts)
+        vim.keymap.set('n', '<leader>vr', "<cmd>lua require('jw.pyright_util').reset_pyright_pythonPath_to_global_env()<CR>", opts)
         vim.keymap.set('n', '<F5>', "<cmd>lua require('jw.pyright_util').run_python_file()<CR>", opts)
     end,
 

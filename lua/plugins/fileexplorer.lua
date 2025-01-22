@@ -55,7 +55,7 @@ plugin =
     filesystem = {
       window = {
         mappings = {
-        ['<leader>n'] = 'close_window',
+          ['<leader>n'] = 'close_window',
         },
       },
       commands = {

@@ -47,7 +47,12 @@ plugin = {
         ["<Tab>"] = cmp.mapping(
           get_func(
             cmp.select_next_item, 
-            fallback
+            function()
+              -- Replace <Tab> with a format Neovim can understand
+              local keys = vim.api.nvim_replace_termcodes("<Tab>", true, true, true)
+              -- Simulate proessing the Tab key
+              vim.api.nvim_feedkeys(keys, "n", true)
+            end
           ),
           {'i', 's'}
         ),

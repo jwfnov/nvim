@@ -21,6 +21,9 @@ vim.api.nvim_set_keymap('n', '<leader>lca', '<cmd>lua vim.lsp.buf.code_action()<
 vim.api.nvim_set_keymap('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', lsp_options) 
 
 
+--=== Util functions
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua require("jw.util").reveal_cd_in_file_explorer()<CR>', { noremap=true })
+
 --[===[
 vim.keymap.set() is a wrapper of vim.api.nvim_set_keymap() and vim.api.nvim_buf_set_keymap().
 It allows multi-mode and also default option is noremap=true that can be overriden by remap=true

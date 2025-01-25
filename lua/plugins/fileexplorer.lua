@@ -48,6 +48,11 @@ plugin =
     desc = 'neo-tree->:Neotree reveal',
     silent = true,
     },
+    {
+    '<leader>nt', ':Neotree toggle<CR>',  -- using <leader>nn instead of <leader>n to hack the default timeoutlen of 1000ms so there wouldn't be a delay displaying the Neotree window
+    desc = 'neo-tree->:Neotree toggle',
+    silent = true,
+    },
   },
 
   --while 'keys' is for whole neovim, opts mappings is for neotree only

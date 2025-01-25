@@ -10,6 +10,13 @@ vim.api.nvim_set_keymap('n', '\\\\', '<C-w>c', { noremap=true })
 vim.api.nvim_set_keymap('n', '<leader>cdnvim', ':cd C:/Users/oven/AppData/Local/nvim/<CR>', {  noremap=true })
 
 
+--=== Buffer Handling - all start with <leader>b 
+-- bufnr('%') is the buffer number of current active buffer VS bufnr('#') is the last accessed buffer VS bufnr() is the one being edited
+--vim.api.nvim_set_keymap('n', '<leader>bqa', [[:bufdo if !&modified && bufnr('%') != bufnr() | echo bufnr() | endif<CR>']], { noremap=true, desc='for each buffer: delete itself if not modified' })
+vim.api.nvim_set_keymap('n', '<leader>bqa', "<cmd>lua require('jw.util').close_other_buffers()<CR>", { noremap=true, desc='for each buffer: delete itself if not modified' })
+vim.api.nvim_set_keymap('n', '<leader>btn', ":tabnew %<CR>", { noremap=true, desc=":tabnew % - move current buffer to a new tab" })
+vim.api.nvim_set_keymap('n', '<leader>bsa', ":bufdo vs |:bn<CR>", { noremap=true, desc="for each buffer: vsplit itself out, then bn to activate next buffer" })
+
 --=== LSP specific
 local lsp_options = { noremap=true, silent=true }
 --= all work in normal mode

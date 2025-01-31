@@ -34,6 +34,7 @@ end
 function F.set_pyright_pythonPath(python_path)
   -- set the pythonPath of pyright
   require("lspconfig").pyright.manager.config.settings.python.pythonPath = python_path
+  vim.cmd("LspRestart")  -- NOTE: must restart for newly set venv to be functional to avoid "import not resolved" warning
   print("pyright pythonPath set to: " .. python_path)
 end
 

@@ -8,16 +8,16 @@ function M.setup()
 
   lspconfig.pyright.setup({
     cmd = {
-      "C:\\tools\\nvm\\nodejs\\pyright-langserver.cmd", 
-      "--stdio"
+      "C:\\tools\\nvm\\nodejs\\pyright-langserver", 
+      "--stdio",
     },
 
-    --settings = {
-    --  python = {
-    --    -- default python path if not overriden by any .venv
-    --    pythonPath = "C:\\Users\\oven\\miniconda3\\envs\\py313\\python.exe",  -- setting this would cause import not resolved for packages not installed in this python env
-    --  },
-    --},
+    settings = {
+      python = {
+        -- default python path if not overriden by any .venv
+        pythonPath = "C:\\Users\\oven\\miniconda3\\envs\\py313\\python.exe",  -- setting this would cause "import not resolved" warning for packages not installed in this python env
+      }
+    },
   
     -- on_attach event is fired only when you open a py file in the buffer
     on_attach = function(client, bufnr)

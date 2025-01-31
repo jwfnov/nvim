@@ -18,3 +18,7 @@ vim.api.nvim_create_autocmd(
 		end,
 	}
 )
+
+
+-- Enable backspace
+o.backspace = { "indent", "eol", "start" }
